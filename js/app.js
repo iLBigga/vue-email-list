@@ -6,11 +6,10 @@ const app = new Vue({
     },
     mounted() {
         for(i = 0; i < 10; i++){
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((res) => {
-                this.email = res.data.response;
-                this.randomEmail.push(this.email)
+                    this.email = res.data.response;
+                    this.randomEmail.push(this.email)
                 });
         };
     },
